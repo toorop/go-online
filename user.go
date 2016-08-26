@@ -15,6 +15,7 @@ type User struct {
 	Company   string `json:"company"`
 }
 
+// String stringer for user
 func (u User) String() string {
 	return fmt.Sprintf("ID: %d, Login: %s, Email: %s, Firstname: %s, Lastname: %s, Company: %s", u.ID, u.Login, u.Email, u.FirstName, u.LastName, u.Company)
 }

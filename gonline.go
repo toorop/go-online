@@ -29,6 +29,7 @@ func New(apiKey string) (*Online, error) {
 // doRequest http.Client.Do with online authentification
 func (o Online) doRequest(req *http.Request) (*http.Response, error) {
 	req.Header.Add("Authorization", "Bearer "+o.apiKey)
+	req.Header.Add("Accept", "application/json")
 	return o.client.Do(req)
 }
 
